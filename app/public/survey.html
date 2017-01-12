@@ -13,10 +13,15 @@
     <style>
         .chosen-select {
             margin: 20px;
+            margin: auto;
         }
         
         .main {
             margin: 50px;
+        }
+        
+        .ques {
+            text-align: center;
         }
         
         h1 {
@@ -45,16 +50,10 @@
     <nav class="navbar  navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        
-      </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"></button>
                 <a class="navbar-brand" href="#">Friend Finder</a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-
-
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/api/friends">API Friends List</a></li>
@@ -76,9 +75,9 @@
         <br>
         <br>
 
-        <div class="jumbotron">
+        <div class="jumbotron ques">
             <h3><strong>Question 1</strong></h3>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+            <h4>You like road trips.</h4>
             <select data-placeholder="" class="chosen-select" id="q1" style="display: block;">
 	 		<option value="" aria-placeholder="select"></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -89,8 +88,9 @@
       	</select>
             <hr>
 
+
             <h3><strong>Question 2</strong></h3>
-            <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+            <h4>You like to party every week-end.</h4>
             <select data-placeholder="" class="chosen-select" id="q2" style="display: block;">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -99,6 +99,8 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
       	</select>
+
+            <hr>
 
             <h3><strong>Question 3</strong></h3>
             <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
@@ -111,6 +113,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
+            <hr>
             <h3><strong>Question 4</strong></h3>
             <h4>You rarely do something just out of sheer curiosity.</h4>
             <select data-placeholder="" class="chosen-select" id="q4" style="display: block;">
@@ -122,8 +125,9 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
+            <hr>
             <h3><strong>Question 5</strong></h3>
-            <h4>People can rarely upset you.</h4>
+            <h4>People can rarely upset people.</h4>
             <select data-placeholder="" class="chosen-select" id="q5" style="display: block;">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -133,6 +137,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
+            <hr>
             <h3><strong>Question 6</strong></h3>
             <h4>It is often difficult for you to relate to other people’s feelings.</h4>
             <select data-placeholder="" class="chosen-select" id="q6" style="display: block;">
@@ -144,6 +149,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
+            <hr>
             <h3><strong>Question 7</strong></h3>
             <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
             <select data-placeholder="" class="chosen-select" id="q7" style="display: block;">
@@ -155,6 +161,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
+            <hr>
             <h3><strong>Question 8</strong></h3>
             <h4>You rarely get carried away by fantasies and ideas.</h4>
             <select data-placeholder="" class="chosen-select" id="q8" style="display: block;">
@@ -166,7 +173,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
+            <hr>
             <h3><strong>Question 9</strong></h3>
             <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
             <select data-placeholder="" class="chosen-select" id="q9" style="display: block;">
@@ -178,7 +185,7 @@
             <option value="5">5 (Strongly Agree)</option>
       	</select>
 
-
+            <hr>
             <h3><strong>Question 10</strong></h3>
             <h4>You feel more energetic after spending time with a group of people.</h4>
             <select data-placeholder="" class="chosen-select" id="q10" style="display: block;">
