@@ -51,13 +51,13 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"></button>
-                <a class="navbar-brand" href="#">Friend Finder</a>
+                <a class="navbar-brand" href="/">Friend Finder</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/api/friends">API Friends List</a></li>
-                    <li><a href="#">Github</a></li>
+                    <li><a href="https://github.com/yanish9/Friend-Finder.git">Github</a></li>
                 </ul>
             </div>
         </div>
@@ -90,7 +90,7 @@
 
 
             <h3><strong>Question 2</strong></h3>
-            <h4>You like to party every week-end.</h4>
+            <h4>You like watching tv shows and movies.</h4>
             <select data-placeholder="" class="chosen-select" id="q2" style="display: block;">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -224,6 +224,7 @@
     <script>
         "use strict";
 
+        var isValid = true;
         $("#submit").on("click", function() {
 
             if ($("#name").val() === "" || $("#imageLink").val() === "") {
@@ -235,9 +236,7 @@
             var scores = [];
             $(".chosen-select").each(function(i) {
                 if ($(this).val() === "") {
-                    // alert("No answer for question " + (i + 1));
-                    // return false;
-
+                    isValid = false;
                 }
                 scores.push($(this).val());
             });
@@ -252,18 +251,21 @@
 
             var currentURL = window.location.origin;
 
-            // AJAX post the data to the friends API. 
-            $.post(currentURL + "/api/friends", object, function(data) {
-                //display result in a modal
-                $("#result").modal("show");
-                var img = $("<img>");
-                img.attr("src", data.link);
 
-                $(".modal-body").html(data.name + "<br>");
-                $(".modal-body").append(img);
-            });
+            if (isValid) {
+                // AJAX post the data to the friends API. 
 
+                $.post(currentURL + "/api/friends", object, function(data) {
+                    //display result in a modal
+                    $("#result").modal("show");
+                    var img = $("<img>");
+                    img.attr("src", data.link);
 
+                    $(".modal-body").html(data.name + "<br>");
+                    $(".modal-body").append(img);
+                });
+
+            }
         })
     </script>
 </body>

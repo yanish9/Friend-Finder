@@ -36,7 +36,7 @@ module.exports = function(app) {
         console.log(req.body.scores);
 
         friends.push(req.body);
-        fs.writeFile("./data/friends.json", JSON.stringify(friends), function(err) {
+        fs.writeFile("app/data/friends.json", JSON.stringify(friends), function(err) {
             if (err) {
                 console.log("Friends write error: " + err);
                 process.exit(1);
