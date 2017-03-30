@@ -41,6 +41,7 @@ module.exports = function(app) {
                 console.log("Friends write error: " + err);
                 process.exit(1);
             }
+            
         });
 
 
